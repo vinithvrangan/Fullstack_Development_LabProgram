@@ -1,13 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokedex Online</title>
-    </head>
-        <body>
-            <h1>Welcome to My Sample HTML Document</h1>
-            <p>This is a paragraph demonstrating a simple HTML structure.</p>
-        </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2026 | Future Trends Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: #0f121a;
+            --accent-color: #00f2ff;
+            --text-muted: #8892b0;
+        }
 
-</html>
+        body {
+            background-color: var(--bg-color);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            background: rgba(5, 7, 10, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 120px 0 80px;
+            background: radial-gradient(circle at 50% 50%, #102a43 0%, #05070a 100%);
+        }
+
+        .accent-text {
+            color: var(--accent-color);
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        }
+
+        /* Trend Cards */
+        .trend-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trend-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 40px rgba(0, 242, 255, 0.15);
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .btn-read {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .btn-read:hover {
+            background: var(--accent-color);
+            color: #000;
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">FUTURE<span class="accent-text">CORE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#trends">Trends</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">The 2026 Vision</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <span class="badge rounded-pill px-3 py-2 mb-3" style="background: rgba(0,242,255,0.1); color: var(--accent-color); border: 1px solid var(--accent-color);">Intelligence & Autonomy</span>
+            <h1 class="display-2 fw-bold mb-4">Top 10 Tech Trends <br><span class="accent-text">of 2026</span></h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+                As the line between biological and digital intelligence blurs, we explore the strategic technology shifts defining the global economy this year.
+            </p>
+        </div>
+    </header>
+
+    <main id="trends" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card trend-card p-4">
+                        <div class="card-category">Autonomous Systems</div>
+                        <h3>Agentic AI</h3>
+                        <p class="text-secondary small">AI that plans and executes multi-step workflows autonomously, moving beyond simple chat interfaces.</p>
+                        <a href="https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html" target="_blank" class="btn btn-read">View Report</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card trend-card p-4">
+                        <div class="card-category">Robotics</div>
+                        <h3>Physical AI</h3>
+                        <p class="text-secondary small">The "embodiment" of intelligence in robots that understand and manipulate the physical world with human-like dexterity.</p>
+                        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2026" target="_blank" class="btn btn-read">View Report</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card trend-card p-4">
+                        <div class="card-category">Software Dev</div>
+                        <h3>Vibe Coding</h3>
+                        <p class="text-secondary small">Natural language-driven development where software is built by describing "intent" rather than writing syntax.</p>
+                        <a href="https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/" target="_blank" class="btn btn-read">View Report</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card trend-card p-4">
+                        <div class="card-category">Geopolitics</div>
+                        <h3>Sovereign AI</h3>
+                        <p class="text-secondary small">Nations
